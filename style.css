@@ -1,0 +1,226 @@
+/* 
+mobile: 375px
+Desktop: 1440px 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+html{
+  font-size: 14px;
+  /*
+  font-family: 'Fraunces', serif;
+  font-family: 'Montserrat', sans-serif;
+  */
+}
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --clr-primary-heavy: hsl(158, 36%, 37%);
+  --clr-primary-light: hsl(30, 38%, 92%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-heavy: hsl(212, 21%, 14%);
+  --clr-neutral-light: hsl(228, 12%, 48%);
+  --border: 1px solid red;
+}
+body{
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--clr-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main{
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 40%;
+  min-width: 500px;
+  min-height: 350px;
+  height: 50%;
+  display: flex;
+}
+section{
+  width: 50%;
+  flex: 1;
+  background-image: url("image-product-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+article{
+  background-color: var(--clr-neutral-white);
+  width: 50%;
+  flex: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-size: smaller;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-bottom: 4em;
+  margin-left: 2.3em;
+}
+h2{
+  width: 80%;
+  text-align:left;
+  word-spacing: rem;
+  font-size: xx-large;
+  font-family: 'Fraunces', serif;
+  line-height: 1.8rem;
+  margin-top: -1em;
+}
+p{
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size:small;
+  width: 90%;
+  font-weight: 500;
+  word-spacing: 0.1rem;
+  text-align: left;
+}
+
+.prices{
+  position: relative;
+  font-weight: 700;
+  font-size: xx-large;
+  align-self: flex-start;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.first-price{
+  font-family: 'Fraunces', serif;
+  color: var(--clr-primary-heavy);
+}
+.second-price{
+  position: absolute;
+  top: 1rem;
+  left: 10rem;
+  font-size: xx-small;
+  text-decoration: line-through;
+}
+
+button{
+  color: var(--clr-neutral-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  height: 3rem;
+  width: 80%;
+  background-color: var(--clr-primary-heavy);
+  border: none;
+  border-radius: 10px;
+}
+button > img{
+  margin-right: 1rem;
+}
+
+button:active{
+  background-color: var(--clr-neutral-heavy);
+}
+
+/* 
+ url-mobile: "image-product-mobile.jpg";
+ url-desktop: "image-product-desktop.jpg";
+*/
+
+/* Queries start*/
+
+@media  screen and (max-width: 500px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+  }
+  section{
+    width: 100%;
+    height: 30%;
+    background-image: url("image-product-mobile.jpg");
+    background-size: cover;
+  }
+  article{
+    height: 70%;
+    width: 100%;
+    flex: 2;
+  }
+  h1{
+    font-size: smaller;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-top: -2em;
+    margin-bottom: 4em;
+    margin-left: 1em;
+  }
+  h2{
+    width: 90%;
+    text-align: left;
+    word-spacing: 0rem;
+    font-size:x-large;
+    font-family: 'Fraunces', serif;
+    line-height: 1.8rem;
+    margin-top: -1em;
+  }
+  p{
+    margin-top: 1rem;
+    margin-left: -3rem;
+    font-size:x-small;
+    width: 70%;
+    font-weight: 500;
+    word-spacing: 0.1rem;
+    text-align: left;
+  }
+  .prices{
+    position: relative;
+    font-weight: 700;
+    font-size: x-large;
+    align-self: flex-start;
+    margin-left: 1.3rem;
+    margin-top: 1rem;
+  }
+  .first-price{
+    font-family: 'Fraunces', serif;
+    color: var(--clr-primary-heavy);
+  }
+  .second-price{
+    position: absolute;
+    top: 0.75rem;
+    left: 8rem;
+    font-size: xx-small;
+    text-decoration: line-through;
+  }
+  button{
+    color: var(--clr-neutral-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: -1em;
+    height: 2rem;
+    width: 85%;
+    background-color: var(--clr-primary-heavy);
+    border: none;
+    border-radius: 5px;
+  }
+  button > img{
+    margin-right: 0.5rem;
+  }
+}
+
+/* Queries end*/
